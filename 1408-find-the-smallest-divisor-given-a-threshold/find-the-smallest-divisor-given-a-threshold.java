@@ -2,10 +2,10 @@ class Solution {
     public int smallestDivisor(int[] arr, int threshold) {
         int n = arr.length;
         int lo = 1 ;
-        int hi = 10_00_000;
-        // for(int i=0;i<n;i++){
-        //     hi = Math.max(hi,arr[i]);
-        // }
+        int hi = Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            hi = Math.max(hi,arr[i]);
+        }
         int ans = 0;
         while(lo<=hi){
             int mid = lo+(hi-lo)/2;
