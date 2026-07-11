@@ -1,8 +1,7 @@
 class Solution {
     public int smallestDivisor(int[] arr, int threshold) {
         int n = arr.length;
-        int lo = 1,hi = Integer.MIN_VALUE ;
-        ;
+        int lo = 1,hi = 10_00_000 ;
         for(int i=0;i<n;i++){
             hi = Math.max(hi,arr[i]);
         }
