@@ -20,6 +20,7 @@ class Solution {
                 sb.append(arr[i]+" ");
             }
         }
+        System.gc();
         return sb.toString().strip();
     }
 }
