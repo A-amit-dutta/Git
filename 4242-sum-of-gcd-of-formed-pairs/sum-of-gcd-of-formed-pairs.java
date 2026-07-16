@@ -10,23 +10,12 @@ class Solution {
             prefixGcd[i] = gcd(arr[i],mx);
         }
         Arrays.sort(prefixGcd);
-        if(n%2 == 0) {
-            int i = 0, j = n-1;
+            int i = 0,j = n-1;
             while(i<j){
                 ans += (long) gcd(prefixGcd[i],prefixGcd[j]);
                 i++;
                 j--;
             }
-        }
-        else{
-            int i = 0,j = n-1;
-            int mid = (i+j)/2;
-            while(i<mid && j>mid){
-                ans += (long) gcd(prefixGcd[i],prefixGcd[j]);
-                i++;
-                j--;
-            }
-        }
         return ans;
     }
 
