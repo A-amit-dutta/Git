@@ -3,7 +3,7 @@ class Solution {
         int n = arr.length ;
         long ans = 0L;
         int mx = arr[0];
-        int[] prefixGcd = new int[n];
+        int[] prefixGcd = new int[n]; // i can use the given array also
         prefixGcd[0] = mx;
         for(int i=1;i<n;i++){
             mx = Math.max(mx,arr[i]);
